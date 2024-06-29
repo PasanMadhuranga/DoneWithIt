@@ -9,8 +9,6 @@ export default function App() {
         flexDirection: "row", // default is column
         justifyContent: "center", // main axis
         alignItems: "center", // cross axis
-        alignContent: "center", // only works with wrap 
-        flexWrap: "wrap",
       }}
     >
       <View
@@ -18,32 +16,19 @@ export default function App() {
           backgroundColor: "dodgerblue",
           width: 100,
           height: 100,
+          flexGrow: 1, // takes up all available space
         }}
       />
       <View
         style={{
           backgroundColor: "red",
           width: 100,
-          height: 300,
+          height: 100,
         }}
       />
       <View
         style={{
           backgroundColor: "orange",
-          width: 100,
-          height: 100,
-        }}
-      />
-      <View
-        style={{
-          backgroundColor: "yellow",
-          width: 100,
-          height: 100,
-        }}
-      />
-      <View
-        style={{
-          backgroundColor: "pink",
           width: 100,
           height: 100,
         }}
