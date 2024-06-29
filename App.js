@@ -3,12 +3,20 @@ import { View } from "react-native";
 
 export default function App() {
   return (
-    <View style={{ flex: 1, flexDirection: "row" }}>
+    <View
+      style={{
+        flex: 1,
+        flexDirection: "row", // default is column
+        justifyContent: "center", // main axis
+        alignItems: "center", // cross axis
+      }}
+    >
       <View
         style={{
           backgroundColor: "dodgerblue",
           width: 100,
           height: 100,
+          alignSelf: "flex-start", // override alignItems
         }}
       />
       <View
