@@ -1,31 +1,30 @@
 // import { StatusBar } from "expo-status-bar";
-import {
-  View,
-} from "react-native";
-import { useDeviceOrientation } from "@react-native-community/hooks";
+import { View } from "react-native";
 
 export default function App() {
   return (
-    <View style={{ flex: 1}}>
+    <View style={{ flex: 1, flexDirection: "row" }}>
       <View
         style={{
           backgroundColor: "dodgerblue",
-         flex: 3,
+          width: 100,
+          height: 100,
         }}
       />
       <View
         style={{
           backgroundColor: "red",
-         flex: 2,
+          width: 100,
+          height: 100,
         }}
       />
       <View
         style={{
           backgroundColor: "orange",
-         flex: 2,
+          width: 100,
+          height: 100,
         }}
       />
     </View>
   );
 }
-
