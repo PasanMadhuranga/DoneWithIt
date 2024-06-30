@@ -1,38 +1,26 @@
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 
 export default function App() {
   return (
     // <WelcomeScreen />
     // <ViewImageScreen />
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <View
+      <Text
         style={{
-          backgroundColor: "dodgerblue",
-          width: 200,
-          height: 200,
-          padding: 20,
-          }}
+          color: "tomato",
+          fontSize: 30,
+          fontWeight: "bold",
+          fontStyle: "italic",
+          // textDecorationLine: "underline",
+          fontFamily: "Roboto", // font families are different for android and ios
+          lineHeight: 40,
+          textAlign: "center",
+        }}
       >
-        <View
-          style={{
-            backgroundColor: "gold",
-            width: 75,
-            height: 75,
-            
-            }}
-        ></View>
-      </View>
-      <View
-        style={{
-          backgroundColor: "tomato",
-          width: 200,
-          height: 200,
-          margin: 20,
-          }}
-      >
-      </View>
+        Hello World lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+      </Text>
     </View>
   );
 }
