@@ -10,20 +10,29 @@ export default function App() {
       <View
         style={{
           backgroundColor: "dodgerblue",
-          width: 100,
-          height: 100,
-          borderColor: "gold",
-          borderWidth: 10,
-          borderRadius: 30,
-          borderTopLeftRadius: 50,
-          borderBottomWidth: 20,
-          elevation: 20,
-          shadowColor: "grey", // Only works on iOS
-          shadowOffset: { width: 10, height: 10 }, // Only works on iOS
-          shadowOpacity: 1, // Only works on iOS, 1 is opaque, 0 is transparent
-          shadowRadius: 10, // Only works on iOS, changes the shadow blur
+          width: 200,
+          height: 200,
+          padding: 20,
           }}
-      ></View>
+      >
+        <View
+          style={{
+            backgroundColor: "gold",
+            width: 75,
+            height: 75,
+            
+            }}
+        ></View>
+      </View>
+      <View
+        style={{
+          backgroundColor: "tomato",
+          width: 200,
+          height: 200,
+          margin: 20,
+          }}
+      >
+      </View>
     </View>
   );
 }
