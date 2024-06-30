@@ -17,6 +17,11 @@ export default function App() {
           borderRadius: 30,
           borderTopLeftRadius: 50,
           borderBottomWidth: 20,
+          elevation: 20,
+          shadowColor: "grey", // Only works on iOS
+          shadowOffset: { width: 10, height: 10 }, // Only works on iOS
+          shadowOpacity: 1, // Only works on iOS, 1 is opaque, 0 is transparent
+          shadowRadius: 10, // Only works on iOS, changes the shadow blur
           }}
       ></View>
     </View>
