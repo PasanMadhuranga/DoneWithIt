@@ -6,12 +6,13 @@ import defaultStyles from '../config/styles';
 
 function AppTextInput({
     icon,
+    onChangeText,
     ...OtherProps
 }) {
     return (
         <View style={styles.container}>
             {icon && <MaterialCommunityIcons name={icon} size={20} color={defaultStyles.colors.medium} style={styles.icon} />}
-            <TextInput style={styles.textInput} {...OtherProps} />
+            <TextInput style={styles.textInput} {...OtherProps} onChangeText={onChangeText} />
         </View>
     );
 }
