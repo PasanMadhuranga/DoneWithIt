@@ -23,7 +23,7 @@ const categories = [
   { label: "Camera", value: 3 },
 ];
 
-export const ListingEditScreen = () => {
+ function ListingEditScreen(){
   return (
     <Screen style={styles.container}>
       <AppForm
@@ -66,3 +66,5 @@ const styles = StyleSheet.create({
     padding: 10,
   },
 });
+
+export default ListingEditScreen;
