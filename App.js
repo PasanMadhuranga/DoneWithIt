@@ -47,7 +47,14 @@ const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={{
+        tabBarActiveBackgroundColor: "tomato",
+        tabBarInactiveBackgroundColor: "#eee",
+        tabBarActiveTintColor: "white",
+        tabBarInactiveTintColor: "black",
+      }}
+    >
       <Tab.Screen name="Feed" component={Tweets} />
       <Tab.Screen name="Account" component={Account} />
     </Tab.Navigator>
