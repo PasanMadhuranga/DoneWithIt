@@ -1,15 +1,26 @@
 import React from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { Text } from "react-native";
+import { Button, Text } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, useNavigation } from "@react-navigation/native";
 
 import Screen from "./app/components/Screen";
 
-const Tweets = () => {
+const Link = () => {
+  const navigation = useNavigation();
+  return (
+    <Button
+      title="Click Meeeeee!"
+      onPress={() => navigation.navigate("TweetDetails")}
+    />
+  );
+}
+
+const Tweets = ({ navigation }) => {
   return (
     <Screen>
       <Text>Tweets</Text>
+      <Link />
     </Screen>
   );
 };
