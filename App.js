@@ -11,10 +11,10 @@ const Link = () => {
   return (
     <Button
       title="Click Meeeeee!"
-      onPress={() => navigation.navigate("TweetDetails", { id: 100 })}
+      onPress={() => navigation.navigate("TweetDetails", { id: "pasan" })}
     />
   );
-}
+};
 
 const Tweets = () => {
   return (
@@ -38,7 +38,11 @@ const StackNavigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Tweets" component={Tweets} />
-      <Stack.Screen name="TweetDetails" component={TweetDetails} />
+      <Stack.Screen
+        name="TweetDetails"
+        component={TweetDetails}
+        options={({ route }) => ({ title: route.params.id })}
+      />
     </Stack.Navigator>
   );
 };
