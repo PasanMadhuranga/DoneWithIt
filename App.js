@@ -53,15 +53,16 @@ const TabNavigator = () => {
         tabBarInactiveBackgroundColor: "#eee",
         tabBarActiveTintColor: "white",
         tabBarInactiveTintColor: "black",
+        headerShown: false,
       }}
     >
-      <Tab.Screen name="Feed" component={Tweets} />
+      <Tab.Screen name="Feed" component={FeedNavigator} />
       <Tab.Screen name="Account" component={Account} />
     </Tab.Navigator>
   );
 };
 
-const StackNavigator = () => {
+const FeedNavigator = () => {
   return (
     <Stack.Navigator
       screenOptions={{
