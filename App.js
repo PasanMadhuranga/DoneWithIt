@@ -3,6 +3,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Button, Text } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import Screen from "./app/components/Screen";
 
@@ -33,7 +34,26 @@ const TweetDetails = ({ route }) => {
   );
 };
 
+const Account = () => {
+  return (
+    <Screen>
+      <Text>Account</Text>
+    </Screen>
+  );
+};
+
 const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
+
+const TabNavigator = () => {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="Feed" component={Tweets} />
+      <Tab.Screen name="Account" component={Account} />
+    </Tab.Navigator>
+  );
+};
+
 const StackNavigator = () => {
   return (
     <Stack.Navigator
@@ -57,7 +77,7 @@ export default function App() {
   return (
     <GestureHandlerRootView>
       <NavigationContainer>
-        <StackNavigator />
+        <TabNavigator />
       </NavigationContainer>
     </GestureHandlerRootView>
   );
