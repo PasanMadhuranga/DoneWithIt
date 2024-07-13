@@ -1,23 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { View, StyleSheet } from "react-native";
 
 import ImageInput from "./ImageInput";
 
-function ImageInputList() {
-  const [imageUris, setImageUris] = useState([]);
+function ImageInputList({ imageUris = [], onRemoveImage, onAddImage }) {
   return (
     <View style={styles.container}>
       {imageUris.map((uri) => (
-        <ImageInput
-          key={uri}
-          imageUri={uri}
-          onChangeImage={() =>
-            setImageUris(imageUris.filter((imageUri) => imageUri !== uri))
-          }
-          style={styles.image}
-        />
+        <View style={styles.image} key={uri}>
+          <ImageInput
+            imageUri={uri}
+            onChangeImage={() => onRemoveImage(uri)}
+          />
+        </View>
       ))}
-      <ImageInput onChangeImage={(uri) => setImageUris([...imageUris, uri])} />
+      <ImageInput onChangeImage={(uri) => onAddImage(uri)} />
     </View>
   );
 }
@@ -25,6 +22,7 @@ function ImageInputList() {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
+    flexWrap: "wrap",
   },
   image: {
     marginRight: 10,
